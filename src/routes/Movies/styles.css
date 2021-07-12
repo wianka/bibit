@@ -1,0 +1,15 @@
+.card {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 0 rgba(49,53,59,0.12);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.card h4 {
+  padding: 16px;
+}

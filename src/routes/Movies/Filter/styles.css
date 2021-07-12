@@ -1,0 +1,37 @@
+.filter {
+  border-top: thin solid #E5E7E9;
+  padding: 16px;
+}
+
+.filter div {
+  display: flex;
+  width: 30%;
+}
+
+.filter input {
+  width: 100%;
+  color: rgba(49,53,59,0.96);
+  background-color: transparent;
+  line-height: 22px;
+  border: 1px solid #E5E7E9;
+  border-right: none;
+  outline: none;
+  height: auto;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  border-radius: 8px 0 0 8px;
+  -webkit-border-radius: 8px 0 0 8px;
+  -moz-border-radius: 8px 0 0 8px;
+  -ms-border-radius: 8px 0 0 8px;
+  -o-border-radius: 8px 0 0 8px;
+}
+
+.filter button {
+  background-color: #F3F4F5;
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid #E5E7E9;
+}
