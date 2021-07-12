@@ -8,7 +8,7 @@ function Routes() {
     <BrowserRouter>
     <Layouts>
       <Switch>
-        <Route exact path="/movies" component={Movies} />
+        <Route path="/movies" component={Movies} />
       </Switch>
     </Layouts>
     </BrowserRouter>

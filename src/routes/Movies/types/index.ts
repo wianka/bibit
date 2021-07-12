@@ -4,6 +4,7 @@ export type typeModalImage = {
 }
 
 export type typeItemMovies = {
+  ref: any,
   Poster: string;
   Title: string;
   Type: string;

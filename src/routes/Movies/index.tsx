@@ -1,37 +1,22 @@
-import React, { useState } from 'react';
-import Filter from './Filter';
-import ListMovies from './List';
-import useGetMoviesList from './hooks/useGetMoviesList';
-import './styles.css';
+import React from 'react';
+import { Switch, useRouteMatch, Route } from 'react-router-dom';
+
+import List from './Container';
+import Details from './Details';
 
 function Index() {
-  const params = { s: 'batman' }; 
-  const fetcher = useGetMoviesList(params);
-
-  const [data, setData] = useState<any>({});
-
-  const getDataList = async () => {
-    await fetcher.then(res => { 
-      return setData(res?.data);
-     });
-  };
-
-  const handleClickSearch = () => {
-    getDataList();
-  }
+  const match = useRouteMatch();
+  const { path } = match;
 
   return (
-    <div>
-      <h1>Movies</h1>
-
-      <div className="card">
-        <h4>List Movies</h4>
-
-        <Filter onClickSearch={handleClickSearch} />
-
-        <ListMovies dataMovies={data} />
-      </div>
-    </div>
+    <Switch>
+      <Route exact path={path}>
+        <List />
+      </Route> 
+      <Route exact path={`${path}/detail/:id`}>
+        <Details />
+      </Route> 
+    </Switch>
   )
 }
 
